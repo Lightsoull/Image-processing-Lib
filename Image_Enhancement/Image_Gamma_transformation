@@ -1,0 +1,29 @@
+import cv2 
+import numpy as np
+
+img = cv2.imread(r"Images/Dog.PNG",0)
+img = img/255.0
+im_power_low_transformation = cv2.pow(img,.6)
+cv2.imshow('Original Image',img)
+cv2.imshow('Power low Transformation',im_power_low_transformation)
+cv2.waitKey(0)
+
+im_power_high_transformation = cv2.pow(img,2)
+cv2.imshow('Original Image',img)
+cv2.imshow('Power high Transformation',im_power_high_transformation)
+cv2.waitKey(0)
+
+img = cv2.imread(r"Images/Dog.PNG",0)
+img = img/255.0
+
+gamma = .6
+img_power_low = np.power(img,gamma)
+cv2.imshow('Original Image',img)
+cv2.imshow('Power low Transformation',img_power_low)
+cv2.waitKey(0)
+
+gamma = 2
+img_power_high = np.power(img,gamma)
+cv2.imshow('Original Image',img)
+cv2.imshow('Power high Transformation',img_power_high)
+cv2.waitKey(0)
