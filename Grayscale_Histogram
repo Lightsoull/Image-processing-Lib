@@ -1,7 +1,5 @@
 """
  * Generate a grayscale histogram for an image.
- *
- * Usage: python GrayscaleHistogram.py <fiilename>
 """
 import sys
 import skimage.io
