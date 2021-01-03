@@ -1,0 +1,16 @@
+import numpy as np
+import cv2
+#read two image
+img1 = cv2.imread("out\hand_Linux.jpg")
+img2 = cv2.imread("Images\LinuxLogo.jpg")
+#subtract two image
+#img3 = img1 - img2
+img3 = cv2.subtract(img1,img2)
+#save img 3
+cv2.imwrite("out\hand_From_Subtract.jpg",img3)
+#display
+cv2.imshow("hand_Logo",img1)
+cv2.imshow("Linux_Logo",img2)
+cv2.imshow("hand_From_Subtract",img3)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
