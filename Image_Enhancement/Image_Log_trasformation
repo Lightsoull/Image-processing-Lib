@@ -1,0 +1,18 @@
+import cv2 
+import numpy as np
+
+img = cv2.imread(r"Images/Dog.PNG",0)
+#img = img/255.0
+img_log = np.uint8(np.log1p(img))
+cv2.imshow('Image before vs after Log Transformation',img_log)
+cv2.waitKey(0)
+thresh1 = cv2.threshold(img_log,1,255,cv2.THRESH_BINARY)[1]
+
+twoImagesWindows = cv2.hconcat((img,thresh1))
+cv2.imshow('Image before vs after Log Transformation',twoImagesWindows)
+cv2.waitKey(0)
+
+thresh1 = cv2.threshold(img_log,2,255,cv2.THRESH_BINARY)[1]
+twoImagesWindows = cv2.hconcat((img,thresh1))
+cv2.imshow('Image before vs after Log Transformation',twoImagesWindows)
+cv2.waitKey(0)
