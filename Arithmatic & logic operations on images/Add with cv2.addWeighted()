@@ -1,0 +1,18 @@
+import numpy as np
+import cv2
+#read two image
+img1 = cv2.imread("Images\WindowsLogo.jpg")
+img2 = cv2.imread("Images\LinuxLogo.jpg")
+#add two image
+img3 = cv2.addWeighted(img1,.3,img2,.7, 0)
+#comment the instruction above and try to excute the instruction below
+#img3 = cv2.add(img1,img2)
+
+#save the img3
+cv2.imwrite("out\Windows_Linux.jpg",img3)
+#display
+cv2.imshow("Windows_Logo",img1)
+cv2.imshow("Linux_Logo",img2)
+cv2.imshow("Windows_Linux",img3)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
