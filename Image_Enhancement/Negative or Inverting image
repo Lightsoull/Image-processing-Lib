@@ -1,0 +1,12 @@
+#load important packages or libs
+import cv2 
+import numpy as np
+
+img = cv2.imread(r"Images/rice.PNG")
+img_resize = cv2.resize(img, (600, 600))
+img_negative = cv2.bitwise_not(img)
+img_negative_resize = cv2.resize(img_negative, (600, 600))
+cv2.imshow("img",img_resize)
+cv2.imshow("img_negative",img_negative_resize )
+cv2.waitKey(0)
+cv2.destroyAllWindows()
