@@ -1,0 +1,12 @@
+import numpy as np
+import cv2
+#read two image
+img1 = cv2.imread("Images\WindowsLogo.jpg")
+img2 = img1 - 50
+#save img 3
+cv2.imwrite("out\WindowsLogo_From_Subtract.jpg",img2)
+#display
+cv2.imshow("WindowsLogo",img1)
+cv2.imshow("WindowsLogo_Subtract",img2)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
